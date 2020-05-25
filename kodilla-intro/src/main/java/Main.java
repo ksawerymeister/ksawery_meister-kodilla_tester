@@ -3,29 +3,37 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
+
+        Book book = Book.of("Isaac Asimov", "The Galaxy");
+
+        System.out.println(book.toString());
+
+
+
+
         // Zadanie 2.6
 
-        User user = new User("Ksawery", 24, 175);
-
-        user.isNameNull();
-        user.isAgeOver30();
-        user.isHeightOver160();
-        user.userDescription();
-
-        User user2 = new User(null, 31, 190);
-
-
-        user2.isNameNull();
-        user2.isAgeOver30();
-        user2.isHeightOver160();
-        user2.userDescription();
-
-        User user3 = new User(null, 19, 185);
-
-        user3.isNameNull();
-        user3.isAgeOver30();
-        user3.isHeightOver160();
-        user3.userDescription();
+//        User user = new User("Ksawery", 24, 175);
+//
+//        user.isNameNull();
+//        user.isAgeOver30();
+//        user.isHeightOver160();
+//        user.userDescription();
+//
+//         User user2 = new User(null, 31, 190);
+//
+//
+//        user2.isNameNull();
+//        user2.isAgeOver30();
+//        user2.isHeightOver160();
+//        user2.userDescription();
+//
+//        User user3 = new User(null, 19, 185);
+//
+//        user3.isNameNull();
+//        user3.isAgeOver30();
+//        user3.isHeightOver160();
+//        user3.userDescription();
 
 
 //        //Zadanie 2.5.2
