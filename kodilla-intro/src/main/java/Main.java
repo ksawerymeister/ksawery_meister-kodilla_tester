@@ -3,14 +3,34 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
+            // Zadanie 2.8
 
-        Book book = Book.of("Isaac Asimov", "The Galaxy");
+        String selectedColor = Colors.userSelectsColor();
 
-        System.out.println(book.toString());
+        switch (selectedColor) {
+            case "White":
+                System.out.println("Your color is white");
+                break;
+            case "Red":
+                System.out.println("Your color is red");
+                break;
+            case "Yellow":
+                System.out.println("Your color is yellow");
+                break;
+            case "Purple":
+                System.out.println("Your color is purple");
+                break;
+            case "Black":
+                System.out.println("Your color is black");
+                break;
+        }
 
 
-
-
+        // Zadanie 2.7
+//        Book book = Book.of("Isaac Asimov", "The Galaxy");
+//
+//        System.out.println(book.toString());
+//
         // Zadanie 2.6
 
 //        User user = new User("Ksawery", 24, 175);
