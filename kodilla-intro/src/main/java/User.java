@@ -40,15 +40,13 @@ public class User {
     }
 
     public void userDescription() {
-        if (isNameNull() & isAgeOver30() & isHeightOver160()) {
-            System.out.println("User is older than 30 and higher than 160 cm");
-        } else if ((isNameNull() & !isAgeOver30() || !isHeightOver160())) {
-            System.out.println("User is younger than 30 or lower than 160 cm");
+        if (!isNameNull()) {
+            if (isAgeOver30() && isHeightOver160()) {
+                System.out.println("User is older than 30 and higher than 160 cm");
+            } else {
+                System.out.println("User is younger than 30 or lower than 160 cm");
+            }
         }
-        else if (!isNameNull()) {
-            System.out.println("User has a name");
-        }
-        else ;
     }
 }
 
