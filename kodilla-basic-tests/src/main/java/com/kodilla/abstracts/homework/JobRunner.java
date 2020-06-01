@@ -4,12 +4,17 @@ public class JobRunner {
 
     public static void main(String[] args) {
 
-     BusDriver romek = new BusDriver(3000, "Driving");
+     BusDriver busDriver = new BusDriver(3000);
 
-     romek.getResponsibilities();
+     Journalist journalist = new Journalist(100000);
 
+     Person jacek = new Person("Jacek", 25, busDriver);
 
+     jacek.getJob().description();
 
+     jacek.setJob(journalist);
+     jacek.getJob().description();
+     
     }
 
 

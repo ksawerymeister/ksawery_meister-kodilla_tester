@@ -2,8 +2,8 @@ package com.kodilla.abstracts.homework;
 
 public class Journalist extends Job{
 
-    public Journalist() {
-        super(5000, "Writing articles");
+    public Journalist(int salary) {
+        super(salary, "Writing articles");
     }
 
     @Override

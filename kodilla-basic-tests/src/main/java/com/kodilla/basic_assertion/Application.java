@@ -4,45 +4,30 @@ public class Application {
 
     public static void main(String[] args) {
 
-        Calculator calculator = new Calculator();
+        Calculator calculator = new Calculator(9, 4);
 
-        int a = 9;
-        int b = 4;
+        boolean correct = ResultChecker.assertEquals(81, calculator.squareUp());
+        Application.result(correct, calculator.getA(), calculator.getB());
 
-        int squareUpResult = calculator.squareUp(a);
-        boolean correct = ResultChecker.assertEquals(81, squareUpResult);
+        calculator.setA(14);
+        calculator.setB(10);
 
+        correct = ResultChecker.assertEquals(13, calculator.sum());
+        Application.result(correct, calculator.getA(), calculator.getB());
+
+        calculator.setA(4);
+        calculator.setB(2);
+
+        correct = ResultChecker.assertEquals(2, calculator.subtract());
+        Application.result(correct, calculator.getA(), calculator.getB());
+    }
+
+    public static void result(boolean correct, int a, int b) {
         if (correct) {
             System.out.println("Metoda działa poprawnie dla liczb "
-                    + a + " i " + b);
-        } else {
-            System.out.println("Metoda działa niepoprawnie dla tych liczb");
-        }
-
-        int sumResult = calculator.sum(a, b);
-        correct = ResultChecker.assertEquals(13, sumResult);
-
-        if (correct) {
-            System.out.println("Metoda działa poprawnie dla liczb "
-                    + a + " i " + b);
-        } else {
-            System.out.println("Metoda działa niepoprawnie dla tych liczb");
-        }
-
-        a= 5;
-        b= 3;
-
-        int subtractResult = calculator.subtract(a, b);
-        correct = ResultChecker.assertEquals(2, subtractResult);
-
-        if (correct) {
-            System.out.println("Metoda działa pooprawnie dla liczb "
                     + a + " i " + b);
         } else {
             System.out.println("Metoda działa niepoprawnie dla tych liczb");
         }
     }
-
-
-
 }
