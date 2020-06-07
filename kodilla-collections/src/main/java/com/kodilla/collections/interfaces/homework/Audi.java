@@ -6,23 +6,16 @@ public class Audi implements Car {
 
     public int currentSpeed;
 
-//    @Override
-//    public int getSpeed() {
-//        return 0;
-//    }
-
     @Override
     public void increaseSpeed(int value) {
         currentSpeed = currentSpeed + value;
-//        System.out.println("Audi is driving with " +
-//                "the speed of " + currentSpeed);
+
     }
 
     @Override
     public void decreaseSpeed(int value) {
         currentSpeed = currentSpeed - value;
-//        System.out.println("Audi is driving with " +
-//                "the speed of " + currentSpeed);
+
     }
 
     @Override
