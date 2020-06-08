@@ -4,7 +4,17 @@ import java.util.Random;
 
 public class Audi implements Car {
 
+    public void setCurrentSpeed(int currentSpeed) {
+        this.currentSpeed = currentSpeed;
+    }
+
     public int currentSpeed;
+
+
+    @Override
+    public int getCurrentSpeed() {
+        return currentSpeed;
+    }
 
     @Override
     public void increaseSpeed(int value) {
@@ -20,13 +30,13 @@ public class Audi implements Car {
 
     @Override
     public void doRace(Car car) {
-        int value;
+
         Random random = new Random();
-        increaseSpeed(value = random.nextInt(51)+50);
-        increaseSpeed(value = random.nextInt(51)+50);
-        decreaseSpeed(value = random.nextInt(81));
-        increaseSpeed(value = random.nextInt(51)+50);
-        decreaseSpeed(value = random.nextInt(81));
-        System.out.println("Current speed of Audi is: " + currentSpeed);
+        increaseSpeed(random.nextInt(51) + 50);
+        increaseSpeed(random.nextInt(51) + 50);
+        decreaseSpeed(random.nextInt(81));
+        increaseSpeed(random.nextInt(51) + 50);
+        decreaseSpeed(random.nextInt(81));
+        System.out.println("Current speed of Audi is: " + getCurrentSpeed());
     }
 }
